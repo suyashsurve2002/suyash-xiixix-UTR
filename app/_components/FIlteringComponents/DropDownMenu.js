@@ -1,7 +1,8 @@
+"use client"
 import * as React from "react"
 import { useState } from "react"
 import { cn } from "@/lib/utils"
-import { useMediaQuery } from "@/hooks/use-media-query"
+// import { useMediaQuery } from "@/hooks/use-media-query"
 import { Button } from "@/app/_components/ui/button"
 import {
   Dialog,
@@ -25,10 +26,7 @@ import { Input } from "@/app/_components/ui/input"
 import { Label } from "@/app/_components/ui/label"
 
 export function DrawerDialog() {
-  const [open, setOpen] = React.useState(false)
-  const isDesktop = useMediaQuery("(min-width: 768px)")
-
-  if (isDesktop) {
+  const [open, setOpen] = useState(false)
     return (
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogTrigger asChild>
@@ -46,31 +44,7 @@ export function DrawerDialog() {
       </Dialog>
     )
   }
-
-  return (
-    <Drawer open={open} onOpenChange={setOpen}>
-      <DrawerTrigger asChild>
-        <Button variant="outline">Edit Profile</Button>
-      </DrawerTrigger>
-      <DrawerContent>
-        <DrawerHeader className="text-left">
-          <DrawerTitle>Edit profile</DrawerTitle>
-          <DrawerDescription>
-            Make changes to your profile here. Click save when you're done.
-          </DrawerDescription>
-        </DrawerHeader>
-        <ProfileForm className="px-4" />
-        <DrawerFooter className="pt-2">
-          <DrawerClose asChild>
-            <Button variant="outline">Cancel</Button>
-          </DrawerClose>
-        </DrawerFooter>
-      </DrawerContent>
-    </Drawer>
-  )
-}
-
-function ProfileForm({ className }: React.ComponentProps<"form">){
+function ProfileForm({ className }){
   return (
     <form className={cn("grid items-start gap-4", className)}>
       <div className="grid gap-2">
