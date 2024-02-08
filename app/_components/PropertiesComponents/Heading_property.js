@@ -6,9 +6,9 @@ import Link from "next/link";
 export default function Heading ({title, location}){
 
     return( 
-        <div className="flex mb-[5vh] ml-[0vw]">
+        <div className="flex mb-[97px] ml-[0vw]">
             <h2 className="text-5xl" >{title}</h2>
-            <p className="bg-[#1f1f1f] text-[#dbdbdb] pt-[10px] px-[50px] ml-[10vw] rounded-[30px]">{location}</p>
+            <p className="bg-[#1f1f1f] text-[#dbdbdb] pt-[10px] px-[50px] ml-[153.6px] rounded-[30px]">{location}</p>
         </div>
     )
 }

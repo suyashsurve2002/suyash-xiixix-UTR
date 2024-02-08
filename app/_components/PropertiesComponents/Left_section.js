@@ -11,7 +11,7 @@ export const LeftSection = ({ property }) => {
     console.log(`suyash`, property);
   }
   return (
-    <div className="w-[45vw] ">
+    <div className="w-[691.2px] ">
       <h2 className="text-[25px] font-bold">
         Price - Rs.{property.numberofguest.price}
       </h2>
@@ -19,15 +19,15 @@ export const LeftSection = ({ property }) => {
         Bath Rooms - {property.propertyAttributes.bathRooms}, Pools -{" "}
         {property.propertyAttributes.pools}
       </h6>
-      <p className="mt-[5vh] pl-[1vw] pr-[3vw] text-[18px]">
+      <p className="mt-[37px] pl-[15.36px] pr-[46.08px] text-[18px]">
         {property.description}
       </p>
 
       <GalleryImages property={property} />
-      <Anemities property={property}/>
-      <PropertyRules property={property}/> 
-      <Faqs property={property}/>
-      <GuestsAllowed property={property}/>
+      <Anemities property={property} />
+      <PropertyRules property={property} />
+      <Faqs property={property} />
+      <GuestsAllowed property={property} />
     </div>
   );
 };

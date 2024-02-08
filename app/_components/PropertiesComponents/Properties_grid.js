@@ -1,6 +1,7 @@
 import Image from "next/image"
 import { propertiesList } from "@/app/_util/Property_list/property_list";
 import Link from "next/link";
+import { HomePageFilter } from "../FIlteringComponents/HomePageFilter";
 
 
 
@@ -9,6 +10,8 @@ export default function PropertiesGrid() {
   // console.log(propertiesList)
 
   return (
+    <div>
+    <HomePageFilter/>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-5">
           {propertiesList.map((property) => (
             <Link key={property._ID} href={`/properties/${property.slug}`}>
@@ -28,6 +31,7 @@ export default function PropertiesGrid() {
             </div>           
             </Link>
           ))}
+        </div>
         </div>
       );
 }
